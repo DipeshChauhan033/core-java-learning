@@ -18,7 +18,14 @@ public class logical{
         System.out.println("Logical AND operator:"+ (num1 > num2 && num1>18)); // return true when both conditions are true
         System.out.println("Logical OR operator:"+ (num1 > num2 || num2<num3)); //return true when any one condition is true
 
-        
+        System.out.println("Logical AND operator: "+ (num1>=num2 && num1++<num3));//if first codition true than adds 1 in num1 otherwise false
+        System.out.println("After condition: "+ num1);
+
+        System.out.println("Logical OR operator: "+ (num1>=num2 || num1++<num3)); // no matter first condition is false/true
+        System.out.println("After condition: "+ num1);
+
+        boolean b = true;
+        System.out.println("Logical NOT operator:"+ (!b)); //change true to false / false to true
         
     }
 }
