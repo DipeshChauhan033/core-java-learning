@@ -3,7 +3,10 @@ import java.util.Scanner;
 public class marksheet{
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
-
+        
+        Syste.out.print("Enter Total Marks: ");
+        int total_marks = s.nextInt();
+        System.out.println();
         System.out.print("Enter marks of maths sub: ");
         float maths = s.nextFloat();
         System.out.print("Enter marks of Social Science sub: ");
@@ -17,7 +20,7 @@ public class marksheet{
         System.out.print("Enter marks of Gujrati sub: ");
         float gujrati = s.nextFloat();
 
-        float percentage = ((maths+ss+science+english+hindi+gujrati)*100)/600;
+        float percentage = ((maths+ss+science+english+hindi+gujrati)*100)/total_marks;
         System.out.println("Percentage: "+percentage);
     }
 }
