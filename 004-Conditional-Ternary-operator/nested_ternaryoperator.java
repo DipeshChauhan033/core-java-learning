@@ -16,6 +16,11 @@ public class nested_ternaryoperator{
 
         System.out.println("Result Grad: "+ result);
 
+        String newresult = (result == "A+")?"Excellent"
+        :(result == "A")? "Very Good"
+        :(result == "B")? "Good"
+        :"Not bad";
+        System.out.println("Acknowledging: "+ newresult);
 
     }
 }
