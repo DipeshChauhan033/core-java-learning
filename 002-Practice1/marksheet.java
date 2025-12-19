@@ -4,7 +4,7 @@ public class marksheet{
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
         
-        Syste.out.print("Enter Total Marks: ");
+        System.out.print("Enter Total Marks: ");
         int total_marks = s.nextInt();
         System.out.println();
         System.out.print("Enter marks of maths sub: ");
