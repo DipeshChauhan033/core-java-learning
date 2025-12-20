@@ -1,3 +1,8 @@
+/**
+ * Write the following expression in a program:
+ * v^2 - u^2 / 2as
+ */
+
 import java.util.Scanner;
 public class expression2{
     public static void main(String[] args){

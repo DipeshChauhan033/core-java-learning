@@ -1,3 +1,9 @@
+/**
+ * Write a java program to encrypt a grade by adding 8 to it.
+ * decrypt it to show the correct grade.
+ */
+
+
 public class grade{
     public static void main(String[] args){
         char grade = 'A';

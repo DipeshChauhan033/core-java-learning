@@ -1,3 +1,8 @@
+/**
+ * Use comarison operators to find out whether a given number is
+ * grater than the user entered number or not
+ */
+
 import java.util.Scanner;
 
 public class comparison{
