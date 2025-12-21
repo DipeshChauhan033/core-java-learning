@@ -56,7 +56,27 @@ public class string_methods{
 
         String check2 = (name.equalsIgnoreCase(s1))?"Yes same":"Not same";
         System.out.format("1st name- %s is, %s with this name- %s(No matter any case)",s1,check2,name2);
+        System.out.println();
+        System.out.println();
 
+        //indexOf(char)
+        System.out.print("Enter char to check index: ");
+        char ch = sc.next().charAt(0);
+        System.out.printf("First occurs %c at index number is: "+s1.indexOf(ch),ch);
+        System.out.println();
+        System.out.println();
 
+        //indexOf(char,int index) start checking from given index
+        System.out.print("Enter char to check index: ");
+        char ch2 = sc.next().charAt(0);
+        
+        System.out.print("Enter index number, when you want to start to check: ");
+        int num5 = sc.nextInt();
+
+        System.out.printf("occurs %c after index number-%d at index number: "+s1.indexOf(ch2,num5),ch2,num5);
+        System.out.println();
+        System.out.println();
+
+        sc.nextLine();
     }
 }
