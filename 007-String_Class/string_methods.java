@@ -78,5 +78,23 @@ public class string_methods{
         System.out.println();
 
         sc.nextLine();
+
+        //toLowerCase()
+        System.out.print("Enter string to convert into lower case: ");
+        String str = sc.nextLine();
+
+        System.out.printf("Upper case string: %s is in lower case String: "+ str.toLowerCase(),str);
+        System.out.println();
+        System.out.println();
+
+
+        //toUpperCase()
+        System.out.print("Enter string to convert into upper case: ");
+        String str2 = sc.nextLine();
+
+        System.out.printf("lower case string: %s is in upper case String: "+ str2.toUpperCase(),str2);
+        System.out.println();
+        System.out.println();
+
     }
 }
