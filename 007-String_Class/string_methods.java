@@ -50,6 +50,13 @@ public class string_methods{
         System.out.println(); //for gape
         System.out.println(); //for gape
 
+        //using operator (==) : not for user inputs bcz objects make diffrent
+        String var1 = "dipesh";
+        String var2 = "dipesh";
+        System.out.printf("%s same with %s? "+(var1 == var2),var1,var2);
+        System.out.println(); //for gape
+        System.out.println(); //for gape
+
         //equalsIgnoreCase(String anotherString);
         System.out.print("Enter name to match with above entered name: ");
         String name2 = sc.nextLine();
@@ -136,7 +143,7 @@ public class string_methods{
 
         sc.nextLine();
 
-        //compareTo -- return int output
+        //compareTo -- return int output (rules book no. 95)
         System.out.print("Enter string to compare with old string: ");
         String str4 = sc.nextLine();
 
