@@ -79,6 +79,30 @@ public class string_methods{
 
         sc.nextLine();
 
+        //lastIndexOf(char)
+        System.out.print("Enter char to check last index: ");
+        char ch5 = sc.next().charAt(0);
+        System.out.printf("last occurs %c at index number is: "+s1.lastIndexOf(ch5),ch5);
+        System.out.println();
+        System.out.println();
+
+        sc.nextLine();
+
+        //lastIndexOf(char,int index)
+        System.out.print("Enter char to check index: ");
+        char ch6 = sc.next().charAt(0);
+        
+        System.out.print("Enter index number, when you want to start for checking: ");
+        int num6 = sc.nextInt();
+
+        System.out.printf("occurs %c after index number-%d at index number: "+s1.lastIndexOf(ch6,num6),ch6,num6);
+        System.out.println();
+        System.out.println();
+
+        sc.nextLine();
+
+
+
         //toLowerCase()
         System.out.print("Enter string to convert into lower case: ");
         String str = sc.nextLine();
@@ -95,6 +119,55 @@ public class string_methods{
         System.out.printf("lower case string: %s is in upper case String: "+ str2.toUpperCase(),str2);
         System.out.println();
         System.out.println();
+
+        //replace(new char,char)
+        System.out.print("Enter string: ");
+        String str3 = sc.nextLine();
+
+        System.out.print("Enter char to replace: ");
+        char ch3 = sc.next().charAt(0);
+
+        System.out.print("Enter char to replace with: ");
+        char ch4 = sc.next().charAt(0);
+
+        System.out.printf("%c is replce with %c: "+str3.replace(ch3,ch4),ch3,ch4);
+        System.out.println();
+        System.out.println();
+
+        sc.nextLine();
+
+        //compareTo -- return int output
+        System.out.print("Enter string to compare with old string: ");
+        String str4 = sc.nextLine();
+
+        int sum = (str4.compareTo(s1));
+
+        String str5 = (sum==0)?"same" : "not same";
+
+        System.out.printf("Output is %d so string is %s with old string ",sum,str5);
+        System.out.println();
+        System.out.println();
+
+
+        //contains(char)
+        System.out.print("Enter char to check string contains or not: ");
+        String ch7 = sc.nextLine();
+
+        System.out.printf("%s is include into %s ?"+ s1.contains(ch7),ch7,s1);
+        System.out.println();
+        System.out.println();
+
+        //trim()
+        System.out.print("Enter string(to remove white space from begging and end): ");
+        
+        String str6 = sc.nextLine();
+        System.out.println("Length before trim: "+str6.length());
+
+        String str7 = str6.trim();
+        System.out.println("white space removed from string: "+str7);
+
+        System.out.println("Length After trim: "+str7.length());
+
 
     }
 }
