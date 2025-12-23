@@ -61,7 +61,7 @@ public class string_methods{
         System.out.print("Enter name to match with above entered name: ");
         String name2 = sc.nextLine();
 
-        String check2 = (name.equalsIgnoreCase(s1))?"Yes same":"Not same";
+        String check2 = (name2.equalsIgnoreCase(s1))?"Yes same":"Not same";
         System.out.format("1st name- %s is, %s with this name- %s(No matter any case)",s1,check2,name2);
         System.out.println();
         System.out.println();
@@ -174,6 +174,41 @@ public class string_methods{
         System.out.println("white space removed from string: "+str7);
 
         System.out.println("Length After trim: "+str7.length());
+        System.out.println();
+        System.out.println();
+
+        //startsWith(string)
+        System.out.print("Enter string: ");
+        String str8 = sc.nextLine();
+        System.out.print("Enter starting char to check: ");
+        String str9 =  sc.nextLine();
+
+        System.out.println("Output: "+str8.startsWith(str9));
+        System.out.println();
+        System.out.println();
+
+        //endsWith(string)
+        System.out.print("Enter string: ");
+        String str10 = sc.nextLine();
+        System.out.print("Enter Ending char to check: ");
+        String str11 =  sc.nextLine();
+
+        System.out.println("Output: "+str10.endsWith(str11));
+        System.out.println();
+        System.out.println();
+
+        //spilt()
+        System.out.print("Enter name to split: ");
+        String str12 = sc.nextLine();
+        String[] space = str12.split(" ");
+
+        for(String f : space){
+            System.out.println(f);
+        }
+        
+        System.out.println();
+        System.out.println();
+
 
 
     }
