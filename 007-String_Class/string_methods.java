@@ -67,14 +67,14 @@ public class string_methods{
         System.out.println();
 
         //indexOf(char)
-        System.out.print("Enter char to check index: ");
+        System.out.print("Enter char to check begin index: ");
         char ch = sc.next().charAt(0);
         System.out.printf("First occurs %c at index number is: "+s1.indexOf(ch),ch);
         System.out.println();
         System.out.println();
 
         //indexOf(char,int index) start checking from given index
-        System.out.print("Enter char to check index: ");
+        System.out.print("Enter char to check begin index: ");
         char ch2 = sc.next().charAt(0);
         
         System.out.print("Enter index number, when you want to start to check: ");
@@ -96,7 +96,7 @@ public class string_methods{
         sc.nextLine();
 
         //lastIndexOf(char,int index)
-        System.out.print("Enter char to check index: ");
+        System.out.print("Enter char to check last index: ");
         char ch6 = sc.next().charAt(0);
         
         System.out.print("Enter index number, when you want to start for checking: ");
