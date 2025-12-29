@@ -18,7 +18,7 @@ public class conditions_3{
             System.out.println("WAIT – Get ready to stop");
         }
         else{
-            System.out.println("Invalid Input");
+            System.out.println("Invalid signal");
         }
     }
 }
