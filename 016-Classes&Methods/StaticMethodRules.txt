@@ -1,0 +1,173 @@
+Advantages of static methods in Java
+
+Static methods belong to the class, not to an object. Because of this, they offer several important advantages:
+
+1. No object creation required
+
+You can call a static method directly using the class name.
+
+Math.sqrt(25);
+
+
+✔ Saves memory
+✔ Faster access
+✔ Useful for utility/helper methods
+
+
+
+2. Better memory efficiency
+
+Static methods are loaded once into memory and shared among all objects.
+
+👉 Ideal when the method logic is common for all objects.
+
+
+
+3. Easy access from main() method
+
+The main() method itself is static, so it can directly call other static methods.
+
+static void display() {
+    System.out.println("Hello");
+}
+
+public static void main(String[] args) {
+    display();
+}
+
+
+
+4. Utility & helper methods
+
+Used for common operations that do not depend on object data.
+
+Examples:
+
+Math.max()
+
+Arrays.sort()
+
+Collections.reverse()
+
+
+
+5. Can access static data directly
+
+Static methods can directly access static variables.
+
+static int count = 10;
+
+static void show() {
+    System.out.println(count);
+}
+
+
+
+6. Better performance for common tasks
+
+Since object creation is avoided, static methods are slightly faster for repetitive calls.
+
+
+
+7. Useful in procedural-style programming
+
+
+Helpful for beginners or small programs like:
+
+Calculator
+Area of circle
+Fibonacci series
+Number utilities
+(Which you often practice in Core Java 👍)
+
+
+
+
+
+Limitations of Static Methods in Java
+
+Cannot access non-static members directly
+
+A static method cannot directly use instance variables or instance methods.
+
+Reason: static methods are loaded before objects are created.
+
+❌ Invalid:
+
+class Test {
+    int x = 10;
+
+    static void show() {
+        System.out.println(x); // error
+    }
+}
+
+
+✅ Valid (using object):
+
+static void show() {
+    Test obj = new Test();
+    System.out.println(obj.x);
+}
+
+
+Cannot use this keyword
+
+this refers to the current object.
+
+Static methods have no object, so this is not allowed.
+
+❌
+
+static void display() {
+    System.out.println(this); // error
+}
+
+
+Cannot use super keyword
+
+super is related to inheritance and object context.
+
+Static methods don’t work with object references.
+
+Method overriding is not supported
+
+Static methods are not overridden, they are method hidden.
+
+Polymorphism does not apply to static methods.
+
+class A {
+    static void show() {
+        System.out.println("A");
+    }
+}
+
+class B extends A {
+    static void show() {
+        System.out.println("B");
+    }
+}
+
+
+Output depends on reference type, not object type.
+
+Cannot be abstract
+
+Abstract methods must be overridden.
+
+Static methods cannot be overridden.
+
+❌
+
+abstract static void test(); // not allowed
+
+
+Cannot access instance-level data without an object
+
+You must create an object explicitly to use instance members.
+
+Not suitable for object-oriented behavior
+
+Static methods break OOP concepts like:
+Polymorphism
+Dynamic binding
