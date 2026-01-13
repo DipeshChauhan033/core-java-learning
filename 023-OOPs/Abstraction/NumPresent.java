@@ -6,17 +6,22 @@ abstract class Check{
 
 class Done extends Check{
     void identify(int n){
+        int count=0;
         int[] arr = {1,50,2,100,20,45,200,74,856,121,22,10,22};
 
         for(int i=0;i<=arr.length-1;i++){
             if(n==arr[i]){
-                System.out.printf("%d is present in array",n);
-                break;
+                count+=1;
             }
-        }  
+        } 
+        if(count>=1){
+            System.out.printf("%d is present in array",n);
+        }
+        else{
+             System.out.printf("%d is not present in array",n);
+        }
     }
 }
-
 
 public class NumPresent{
     public static void main(String[] args){
