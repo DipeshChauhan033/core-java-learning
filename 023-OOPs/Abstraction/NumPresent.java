@@ -5,6 +5,7 @@ abstract class Check{
 }
 
 class Done extends Check{
+    @Override
     void identify(int n){
         int count=0;
         int[] arr = {1,50,2,100,20,45,200,74,856,121,22,10,22};
