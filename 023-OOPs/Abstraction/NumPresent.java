@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 abstract class Check{
     abstract void identify(int n);
+
+    void say(){
+        System.out.print("hello");
+    }
 }
 
 class Done extends Check{
@@ -33,5 +37,8 @@ public class NumPresent{
 
         Check obj = new Done();
         obj.identify(n);
+
+        Check c = new Check();
+        c.say();
     }
 }
