@@ -38,7 +38,7 @@ public class NumPresent{
         Check obj = new Done();
         obj.identify(n);
 
-        Check c = new Check();
-        c.say();
+        /* Check c = new Check();     
+           c.say();                   --Check is abstract; cannot be instantiated  */ 
     }
 }
