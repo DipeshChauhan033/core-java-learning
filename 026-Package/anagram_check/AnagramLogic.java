@@ -3,7 +3,7 @@ package anagram_check;
 import length.*;
 import java.util.*;
 
-class anagramLogic{
+public class AnagramLogic{
     public String str1;
     public String str2;
     public int s1length = 0;
@@ -62,17 +62,4 @@ class anagramLogic{
         
     }
     
-}
-public class AnagramLogic{
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter 1st String: ");
-        String s1 = sc.nextLine();
-
-        System.out.print("Enter 2nd String: ");
-        String s2 = sc.nextLine();
-        
-        anagramLogic obj = new anagramLogic(s1,s2);
-        obj.check_anagram();
-    }
 }
