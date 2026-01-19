@@ -12,10 +12,11 @@ public class AnagramLogic{
     public int count2 = 0;
 
 
-    public anagramLogic(String str1,String str2){
+    public AnagramLogic(String str1,String str2){
         this.str1 = str1;
         this.str2 = str2;
     }
+
     public void check_anagram(){
 
         str1 = str1.replaceAll("\\s", "").toLowerCase();
