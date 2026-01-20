@@ -4,7 +4,7 @@ abstract class Check{
     abstract void identify(int n);
 
     void say(){
-        System.out.print("hello");
+        System.out.println("Program Ends");
     }
 }
 
@@ -39,6 +39,9 @@ public class NumPresent{
         obj.identify(n);
 
         /* Check c = new Check();     
-           c.say();                   --Check is abstract; cannot be instantiated  */ 
+           c.say();                   --Check is abstract; cannot be instantiated  */
+
+        Done obj2 = new Done();
+        obj.say(); 
     }
 }
