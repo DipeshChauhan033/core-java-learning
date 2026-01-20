@@ -8,7 +8,7 @@ interface payments{
 }
 
 class PaymentThrough implements payments{
-     int balance = 50000;
+    static int balance = 50000;
 
     public void CreditCardPayment(int p){
         balance = balance-p;
@@ -32,8 +32,35 @@ public class PaymentGateway{
 
         System.out.println();
         payments obj = new PaymentThrough();
-        obj.CreditCardPayment();
-        obj.UpiPayment();
-        obj.NetBanking()
+        
+        int tmp = 0;
+        while(tmp!=1){
+            System.out.print("Enter 1 to transfer amount by CreditCard\nEnter 2 to transfer amount by UpiPayment\nEnter 3 to transfer amount by NetBanking\nEnter 4 to check bankbalance:");
+            int choice = sc.nextInt();
+
+            switch(choice){
+                case 1:
+                    System.out.print("Enter amount to tranfer: ");
+                    int a1 = sc.nextInt();
+                    obj.CreditCardPayment(a1);
+                    break;
+                
+                case 2:
+                    System.out.print("Enter amount to tranfer: ");
+                    int a2 = sc.nextInt();
+                    obj.UpiPayment(a2);
+                    break;
+
+                case 3:
+                    System.out.print("Enter amount to tranfer: ");
+                    int a3 = sc.nextInt();
+                    obj.NetBanking(a3);
+                    break;
+
+                case 4:
+                    PaymentThrough obj2 = new PaymentThrough();
+                    System.out.println("Bank Balance:"+obj2.balance);
+            }
+        }
     }
 }
