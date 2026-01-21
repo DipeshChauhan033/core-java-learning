@@ -4,16 +4,14 @@ class ThreeNoInDESC{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
-        int a = 4;
-        int b = 3;
-        int c = 5;
+        System.out.print("Enter Number1: ");
+        int a = sc.nextInt();
+        System.out.print("Enter Number2: ");
+        int b = sc.nextInt();
+        System.out.print("Enter Number3: ");
+        int c = sc.nextInt();
 
-        int[] arr = new int[3];
-
-        arr[0]=a;
-        arr[1]=b;
-        arr[2]=c;
-
+        System.out.println("Numbers in Descending order: ");
         for(int i=0;i<1;i++){
             if(a>b && a>c){
                 System.out.println(a);
@@ -26,13 +24,13 @@ class ThreeNoInDESC{
             }
                        
             for(int j=0;j<1;j++){
-                if(a>b && a<c){
+                if((a>b && a<c) || (a<b && a>c)){
                     System.out.println(a);
                 }
-                else if(b>a && b<c){
+                else if((b>a && b<c) || (b<a && b>c)){
                     System.out.println(b);
                 }
-                else if(c>a && c<b){
+                else if((c>a && c<b) || (c<a && c>b)){
                     System.out.println(c);
                 }
 
