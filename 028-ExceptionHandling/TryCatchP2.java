@@ -1,34 +1,37 @@
-public class TryCatchP2{
+/**
+ * Multiple catch
+ */
 
-    public static int devide(int a, int b){
-        try{
-            if(a>b){}
-        
-            try{
-                return a/b;
-            }
-            catch(ArithmeticException e){
-                System.out.println("Number can't devide by zero");
-                return -1;
-            }
-        }
-        catch(Exception e){
-            System.out.println("Index :(");
-            return -1;
-        }
+class InitializeArr{
+    String s;
+    public InitializeArr(String s){
+        this.s=s;
     }
+    public void operations(){
+        int[] arr1 = {10,40,30,120,200};
+        int[] arr2 = {1,2,0,4,5};
 
-    public static void main(String[] args){
-        
-
-        int[] arr1 = {10,40,60,80,90};
-        int[] arr2 = {1,2,0,4};
-
+          
         for(int i=0;i<arr1.length;i++){
-            System.out.println(devide(arr1[i],arr2[i]));
+            try{
+                System.out.println(arr1[i]/arr2[i]);
+            }
+            catch(IndexOutOfBoundsException e){
+                System.out.println("Fifth position is not define- index out of bound");
+             }
+            catch(ArithmeticException e){
+                System.out.printf("%d not devided by 0%n",arr1[i]);
+             }
         }
+        System.out.println("Division completed :)");
         
         
+    }
+}
 
+public class TryCatchP2{
+    public static void main(String[] args){
+        InitializeArr obj = new InitializeArr("d");
+        obj.operations();
     }
 }
