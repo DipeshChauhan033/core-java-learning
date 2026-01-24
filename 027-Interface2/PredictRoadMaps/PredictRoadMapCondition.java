@@ -14,7 +14,7 @@ class AddLogic implements DataAnalyst,WebDevelopment,AppDevelopment{
     }
 }
 
-class PredictRoadMapCondition{
+public class PredictRoadMapCondition{
     public String s;
     public void PredictRoadMapCon(){
         Scanner sc = new Scanner(System.in);
