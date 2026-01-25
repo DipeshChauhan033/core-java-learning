@@ -1,1 +1,6 @@
-return -1;
+try{
+            obj.checkAge();
+        }
+        catch(Exception e){
+            System.out.println(e);    
+        }
