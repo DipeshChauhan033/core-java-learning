@@ -1,6 +1,6 @@
 public class LargestNum{
     public static void main(String[] args){
-        int[] arr = {30,51,540,34,11,46,130};
+        int[] arr = {600,30,50,150,20,602,14,6,2,59,2,0,601,5,9,99,2,22,5,300,450,88,500};
 
         int count = 0;
         for(int i=0;i<arr.length;i++){
