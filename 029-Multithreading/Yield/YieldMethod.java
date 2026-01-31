@@ -11,22 +11,32 @@ class Tmp extends Thread{
 class Tmp1 extends Thread{
     @Override
     public void run(){
-        
+        System.out.println("After Using yield method...");
         for(int i = 0;i<=5;i++){
             System.out.println("Thread: "+Thread.currentThread().getName() + " Is running");
-            Thread.yield();
+            Thread.yield();   //gives chance to another process
         }
     } 
 }
 
 public class YieldMethod{
     public static void main(String[] args){
+        /*
         Tmp obj1 = new Tmp();
         Tmp obj2 = new Tmp();
+       
+       
         System.out.println("Before Using yield method...");
         obj1.start();
         obj2.start();
 
+        */
+        Tmp1 obj3 = new Tmp1();
+        Tmp1 obj4 = new Tmp1();
+
+        System.out.println("After Using yield method...");
+        obj3.start();
+        obj4.start();
         
 
     }
