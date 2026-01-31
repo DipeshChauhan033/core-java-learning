@@ -21,8 +21,8 @@ public class SetPriority extends Thread{
         SetPriority m = new SetPriority("Medium Priority");
         SetPriority h = new SetPriority("High Priority");
         l.setPriority(Thread.MIN_PRIORITY);
-        m.setPriority(Thread.MIN_PRIORITY);
-        h.setPriority(Thread.MIN_PRIORITY);
+        m.setPriority(Thread.NORM_PRIORITY);
+        h.setPriority(Thread.MAX_PRIORITY);
         l.start();
         m.start();
         h.start();
