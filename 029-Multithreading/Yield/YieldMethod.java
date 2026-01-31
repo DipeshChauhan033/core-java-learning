@@ -11,7 +11,6 @@ class Tmp extends Thread{
 class Tmp1 extends Thread{
     @Override
     public void run(){
-        System.out.println("After Using yield method...");
         for(int i = 0;i<=5;i++){
             System.out.println("Thread: "+Thread.currentThread().getName() + " Is running");
             Thread.yield();   //gives chance to another process
@@ -20,8 +19,8 @@ class Tmp1 extends Thread{
 }
 
 public class YieldMethod{
-    public static void main(String[] args){
-        /*
+    public static void main(String[] args) throws InterruptedException{
+        
         Tmp obj1 = new Tmp();
         Tmp obj2 = new Tmp();
        
@@ -30,7 +29,11 @@ public class YieldMethod{
         obj1.start();
         obj2.start();
 
-        */
+        obj1.join();
+        obj2.join();
+
+        System.out.println();
+        
         Tmp1 obj3 = new Tmp1();
         Tmp1 obj4 = new Tmp1();
 
